@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    height: 90px;
+}
+.SeCe-main-wrap{
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+.SeCe-top-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    position: relative;
+}
+.SeCe-main-h1{
+    color: rgb(34, 34, 34);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+    text-align: center;
+}
+.SeCe-main-ban{
+    flex: 0 0 auto;
+    display: flex;
+    width: 1194px;
+    height: 48px;
+    margin: 0 auto;
+    position: absolute;
+    list-style: none;
+    margin-left:20px;
+    font-weight:600;
+    left: 0px;
+    bottom: 0px;
+}
+.SeCe-main-ban > li{
+    margin: 0 auto;
+    display: flex;
+}
+
+.SeCe-main-ban a{
+    display: flex;
+    color: black;
+    border-top-width: 2px;
+    border-bottom: 2px solid #52b0fb;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.SeCe-main-ban a:hover{
+    color: #52b0fb;
+    border-bottom: 2px solid #6c6c6c;
+}
+.SeCe-oto-wrap{
+    width: 1280px;
+}
+.SeCe-oto-head{
+    width: 100%;
+    padding: 72px 0px;
+    font-size: 18px;
+    line-height: 33px;
+    font-weight: 600;
+    text-align: center;
+    color: #6c6c6c;
+}
+.SeCe-oto-head span{
+    color: #52b0fb;
+    outline: none;
+}
+.SeCe-oto-ul{
+    border-bottom: 1px solid #d1d1d1;
+    border-top: 1px solid #d1d1d1;
+    list-style: none;
+}
+.SeCe-oto-1{
+    display: flex;
+    align-items: center;
+    padding: 12px 0px 0px 168px;
+}
+.SeCe-oto-tit1{
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 600;
+    width: 130px;
+    text-align: center;
+}
+.SeCe-oto-tit01 {
+    padding-bottom: 79px;
+}
+
+.SeCe-oto-slt{
+    height: 46px;
+    padding: 0px 8px 0px 10px;
+    color: #222222;
+    font-size: 13px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    width: 70%;
+}
+.SeCe-oto-inp{
+    padding: 0px 16px;
+    color: #222222;
+    font-size: 13px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    height: 44px;
+    width: 70%;
+}
+.SeCe-oto-ta{
+    color: #222222;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    background-color: #FFFFFF;
+    resize: none;
+    width: 70%;
+    height: 263px;
+    padding: 16px;
+}
+.SeCe-oto-pica{
+    display: flex;
+    flex-direction: column;
+}
+.SeCe-oto-pwrap{
+    display: flex;
+    border: none;
+}
+.SeCe-oto-upl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 106px;
+    height: 106px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    cursor: pointer;
+}
+.SeCe-oto-upl button{
+    margin-top: 4px;
+    color:rgb(34, 34, 34);
+    font-size: 13px;
+    font-weight: 400;
+    border: none;
+}
+.SeCe-oto-p{
+    margin-top: 16px;
+    padding-bottom: 30px;
+}
+.SeCe-oto-p > p{
+    color: rgb(134, 134, 134);
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+}
+.SeCe-oto-foot{
+    width: 100%;
+    margin: 50px 0px;
+    text-align: center;
+}
+.SeCe-oto-btn{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    width: 200px;
+    height: 46px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.SeCe-oto-btn:hover{
+    background-color: #FEC72F;
+    color: black;
+    border: 1px solid #FEC72F;
+}
+input, textarea{
+    caret-color:#898989;
+}
+input:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+select:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+textarea:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+textarea::placeholder {
+    color:#222222;
+}

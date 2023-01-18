@@ -1,0 +1,1098 @@
+@charset "utf-8";
+
+/* realEstate01.css */
+*{
+    margin:0; padding:0;
+    /* border:1px solid black; */
+    /* box-sizing:border-box; */
+}
+
+.ReEs-overflow{
+    width: 100%;
+    height: 100vh;
+    overflow : hidden;
+}
+/* 교체필요(header영역) */
+.ReEs-imsiHeader{
+    width: 100%;
+    height:90px;
+}
+
+/* ↓ 지도 ↓ */
+.ReEs-parent{
+    width:100%;
+    height:100%;
+    background-color:gray;
+}
+.ReEs-map{
+    width:100%;
+    height:100%;
+    background-color:gray;
+}
+.ReEs-leftButton{
+    box-sizing: border-box;
+    position:absolute;
+    top:25px;
+    left:25px;
+    background-color:#20a7ff;
+    border-color: #0b2d93;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    height: 32px;
+    min-width: 72px;
+    padding: 0 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align:center;
+    padding-top:6px;
+    z-index:999;
+}
+.ReEs-leftButton:hover{
+    background-color:#FEC72F;
+    color:#000;
+}
+.ReEs-rightButton{
+    box-sizing: border-box;
+    position:absolute;
+    top:25px;
+    right:25px;
+    background-color:#20a7ff;
+    border-color: #0b2d93;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    height: 32px;
+    min-width: 72px;
+    padding: 0 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align:center;
+    padding-top:6px;
+    z-index:999;
+}
+.ReEs-rightButton:hover{
+    background-color:#FEC72F;
+    color:#000;
+}
+
+.ReEs-NaviOn{
+    background-color:#6c93f7;
+}
+.customOverlay{
+    border-radius:10px;
+    border:1px solid #6c93f7;
+    background-color:#FFFFFF;
+    color:#387ccf;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+}
+.leftNumber{
+    background-color:#387ccf;
+    color:#FFFFFF;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+    border-radius:10px;
+    padding-left:6px;
+    padding-right:6px;
+}
+.center{
+    border-radius:10px;
+    margin:5px;
+}
+
+/* ************************** */
+/* ↓ 지도네비게이션 ↓ */
+.ReEs-navi{
+    width:100%;
+    height:66px;
+    background-color:#52b0fb;
+}
+.ReEs-navi>div{
+    box-sizing:border-box;
+}
+.ReEs-navi-normal{
+    height:66px;
+    width:1000px;
+    margin-left:460px;
+    padding:12px 0;
+    float:left;
+    justify-content:center;
+}
+.ReEs-navi-font{
+    box-sizing:border-box;
+    text-align:center;
+    font-size:16px;
+    padding-top:7px;
+    color:#FFFFFF;
+    font-weight:600;
+}
+
+/* 지도 네비게이션 기본 영역*/
+.ReEs-navi-normal>div{
+    display:inline-block;
+    height:34px;
+    margin-left:43px;
+    background-color:rgb(255 255 255 / 28%);
+    border:1px solid rgb(255 255 255 / 39%);
+    border-radius:25px;
+}
+
+.ReEs-navi-normal-search{
+    width:250px;
+}
+.ReEs-navi-normal-search:empty::before{
+    content:attr(placeholder);
+    color:gray;
+}
+.ReEs-navi-normal-TrType{
+    width:125px;
+}
+.ReEs-navi-normal-houseType{
+    width:125px;
+}
+.ReEs-navi-normal-floor{
+    width:125px;
+}
+.ReEs-navi-normal-extent{
+    width:125px;
+}
+.ReEs-navi-normal-cost{
+    width:225px;
+}
+.ReEs-navi-sl-font{
+    box-sizing:border-box;
+    font-size:15px;
+    background-color:#f8f8f8;
+}
+.ReEs-navi-sl-font:hover{
+    box-sizing:border-box;
+    background-color:#52b0fb;
+    color:#FFFFFF;
+    font-family:600;
+    font-size:15px;
+}
+.ReEs-navi-normal-TrType-select{
+    position:absolute;
+    top:155px;
+    left:504px;
+    width:125px;
+    height:126px;
+    display:none;
+    z-index:999;
+}
+.ReEs-navi-normal-TrType-select>div{
+    width:125px;
+    height:42px;
+    text-align:center;
+    padding-top:12px;
+}
+.ReEs-navi-normal-TrType-select>div{
+    border-bottom: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-radius: 5px;
+}
+
+.ReEs-navi-normal-houseType-select{
+    position:absolute;
+    top:155px;
+    left:674px;
+    width:125px;
+    height:168px;
+    display:none;
+    z-index:999;
+}
+.ReEs-navi-normal-houseType-select>div{
+    width:125px;
+    height:42px;
+    border-bottom: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-radius: 5px;
+    text-align:center;
+    padding-top:12px;
+}
+.ReEs-navi-normal-floor-select{
+    position:absolute;
+    display:none;
+    top:155px;
+    left:772px;
+    width:285px;
+    height:230px;
+    border:1px solid #d1d1d1;
+    background-color:#f8f8f8;
+    padding:0;
+    border-radius:5px;
+    z-index:999;
+    display: none;
+}
+
+.ReEs-navi-normal-floor-select-div1{
+    box-sizing: border-box;
+    margin:0;
+    width:194px;
+    height:208px;
+    float:left;
+}
+.ReEs-navi-normal-floor-select-namediv{
+    width:197px;
+    height:38px;
+    padding-left:80px;
+    padding-top:24px;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+.ReEs-navi-normal-floor-select-img{
+    margin:0 auto;
+    width:100px;
+    height:100px;
+    text-align:center;
+}
+.ReEs-navi-normal-floor-select-img>i{
+    font-size:82px;
+    margin-top:20px;
+    color:#52b0fb;
+}
+
+.ReEs-navi-normal-floor-select-div2{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    width:80px;
+    height:208px;
+    float:left;
+}
+.floor-exButton{
+    box-sizing:border-box;
+    text-align:center;
+    margin-top:20px;
+    padding-top:10px;
+    width:80px;
+    height:37px;
+    border-radius:6px;
+    border:1px solid #d1d1d1;
+    color:#000;
+    font-size:14px;
+    font-weight:600;
+}
+/* 평수 셀렉트 시작 */
+.ReEs-navi-normal-extent-select{
+    position:absolute;
+    top:155px;
+    left:928px;
+    width:300px;
+    height:150px;
+    border-bottom: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-radius:5px;
+    background-color:#f8f8f8;
+    padding:0;
+    display:none;
+    z-index:999;
+}
+.ReEs-navi-normal-extent-select-namediv{
+    height:40px;
+    padding-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+
+
+/* 월세/관리비/보증금 셀렉트 */
+.ReEs-navi-normal-cost-select{
+    position:absolute;
+    top:155px;
+    left:1133px;
+    width:319px;
+    height:420px;
+    border-bottom: 1px solid #d1d1d1;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    display:none;
+    z-index:999;
+}
+
+/* 지도네비게이션 맞춤 영역 */
+.ReEs-navi-custom{
+    height:66px;
+    width:310px;
+    float:left;
+}
+.ReEs-navi-custom-button{
+    height:42px;
+    width:200px;
+    /*margin:12px auto;*/
+    border:1px solid black;
+    background-color:white;
+}
+.ReEs-navi-custom-button-select{
+    position:absolute;
+    top:155px;
+    left:1229px;
+    width:310px;
+    border:1px solid black;
+    background-color:white;
+    display:none;
+    z-index:999;
+}
+.ReEs-custom-select-button-div{
+    width:280px;
+    margin:0 auto;
+}
+
+.ReEs-on{
+    background-color:#FEC72F;
+    color:#FFFFFF;
+}
+
+/* .ReEs-off{
+    display: none;
+    background-color:#FFFFFF;
+    color:#FEC72F;
+} */
+.ReEs-custom-select-button{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    margin-left:7px;
+    margin-top:20px;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    color:#3A6BA5;
+    font-weight:800;
+    font-size:14px;
+}
+
+.ReEs-custom-select-Allbutton-div{
+    width:280px;
+    height:40px;
+    margin:15px auto;
+}
+.ReEs-custom-select-AllOn{
+    box-sizing:border-box;
+    display:inline-block;
+    margin-left:100px;
+    text-align:center;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    background-color:#6c93f7;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:14px;
+}
+.ReEs-custom-select-AllOff{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    margin-left:10px;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    background-color: #b8b7bb;
+    color:#000;
+    font-weight:500;
+    font-size:14px;
+}
+/* 지도네비게이션 카테고리 영역 */
+.ReEs-navi-category{
+    height:66px;
+    width:310px;
+    float:left;
+}
+.ReEs-navi-category-button{
+    height:42px;
+    width:200px;
+    /* margin:12px auto; */
+    border:1px solid black;
+    background-color:white;
+}
+.ReEs-navi-category-button-select{
+    position:absolute;
+    top:155px;
+    left:1458px;
+    width:310px;
+    border:1px solid black;
+    background-color:white;
+    display:none;
+    z-index:999;
+}
+.ReEs-category-select-button-div{
+    width:280px;
+    margin:0 auto;
+}
+.ReEs-category-select-button{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    margin-left:7px;
+    margin-top:20px;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    color:#3A6BA5;
+    font-weight:800;
+    font-size:14px;
+}
+.ReEs-category-select-Allbutton-div{
+    width:280px;
+    height:40px;
+    margin:15px auto;
+}
+.ReEs-category-select-AllOn{
+    box-sizing:border-box;
+    display:inline-block;
+    margin-left:100px;
+    text-align:center;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    background-color:#6c93f7;
+    color:#FFFFFF;
+    font-weight:500;
+    font-size:14px;
+}
+.ReEs-category-select-AllOff{
+    box-sizing:border-box;
+    display:inline-block;
+    text-align:center;
+    margin-left:10px;
+    padding-top:8px;
+    width:80px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #94BBCC;
+    background-color: #b8b7bb;
+    color:#000;
+    font-weight:500;
+    font-size:14px;
+}
+/* ************************** */
+
+/* 양방향 슬라이더 */
+/* floor slider */
+.ReEs-navi-normal-floor-select-slider{
+    width:199px;
+    height:20px;
+    box-sizing:border-box;
+}
+
+.ReEs-navi-normal-floor-select-slider > .floorSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-floor-select-slider > .floorSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-floor-select-slider > .floorSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReEs-navi-normal-floor-select-slider> .floorSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-floor-select-slider>.floorSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-floor-select-slider>.floorSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-floor-select-slider>input[type="range"] {
+    position: absolute;
+    /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 199px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-floor-select-slider>input[type="range"]::-webkit-slider-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-floor-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 7px auto;
+    width:80px;
+    height:38px;
+    border-radius:6px;
+    border:1px solid #52b0fb;
+    background-color: #52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+    font-size:13px;
+    padding-top:11px;
+}
+
+/* extent slider */
+.ReEs-navi-normal-extent-select-slider{
+    width:300px;
+    height:30px;
+}
+
+.ReEs-navi-normal-extent-select-slider > .extentSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-extent-select-slider > .extentSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-extent-select-slider > .extentSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReEs-navi-normal-extent-select-slider> .extentSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-extent-select-slider>.extentSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-extent-select-slider>.extentSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-extent-select-slider>input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 299px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-extent-select-slider>input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-extent-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 0 auto;
+    padding-top:11px;
+    width:100px;
+    height:38px;
+    border-radius:5px;
+    font-size:13px;
+    border:1px solid #52b0fb;
+    background-color:#52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+}
+/* */
+/* monthSlider관련 css */
+.ReEs-slider-month{
+    width:310px;
+    height:140px;
+    margin: auto;
+    border-bottom:1px solid #d1d1d1;
+    box-sizing: border-box;
+}
+
+
+.ReEs-navi-normal-month-select-slider{
+    width:300px;
+    height:30px;
+    margin:auto;
+}
+.ReEs-navi-normal-month-select-namediv{
+    height:40px;
+    padding-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+.ReEs-navi-normal-month-select-slider > .monthSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-month-select-slider > .monthSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-month-select-slider > .monthSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReEs-navi-normal-month-select-slider> .monthSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-month-select-slider>.monthSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-month-select-slider>.monthSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-month-select-slider>input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 299px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-month-select-slider>input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-month-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 0 auto;
+    padding-top:11px;
+    width:300px;
+    height:40px;
+    border-radius:6px;
+    font-size:14px;
+    border:1px solid #52b0fb;
+    background-color:#52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+}
+
+/* */
+/* manageSlider관련 css */
+.ReEs-slider-manage{
+    width:310px;
+    height:140px;
+    margin:auto;
+    border-bottom:1px solid #d1d1d1;
+    box-sizing: border-box;
+}
+
+.ReEs-navi-normal-manage-select-slider{
+    width:300px;
+    height:30px;
+    margin:auto;
+}
+.ReEs-navi-normal-manage-select-namediv{
+    height:40px;
+    padding-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+.ReEs-navi-normal-manage-select-slider > .manageSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-manage-select-slider > .manageSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-manage-select-slider > .manageSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReEs-navi-normal-manage-select-slider> .manageSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-manage-select-slider>.manageSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-manage-select-slider>.manageSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-manage-select-slider>input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 299px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-manage-select-slider>input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-manage-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 0 auto;
+    padding-top:11px;
+    width:300px;
+    height:40px;
+    border-radius:6px;
+    border:1px solid #52b0fb;
+    background-color: #52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+}
+
+/* depositSlider관련 css */
+.ReEs-slider-deposit{
+    width:310px;
+    height:140px;
+    margin:auto;
+    box-sizing: border-box;
+}
+.ReEs-navi-normal-deposit-select-slider{
+    width:300px;
+    height:30px;
+    margin:auto;
+}
+.ReEs-navi-normal-deposit-select-namediv{
+    height:40px;
+    padding-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+.ReEs-navi-normal-deposit-select-slider > .depositSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-deposit-select-slider > .depositSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-deposit-select-slider > .depositSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+
+}
+.ReEs-navi-normal-deposit-select-slider> .depositSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color:  #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-deposit-select-slider>.depositSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-deposit-select-slider>.depositSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-deposit-select-slider>input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 299px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-deposit-select-slider>input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-deposit-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 0 auto;
+    padding-top:11px;
+    width:300px;
+    height:40px;
+    border-radius:6px;
+    font-size:14px;
+    border:1px solid  #52b0fb;
+    background-color: #52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+}
+/* 매매가 관련 */
+.ReEs-slider-trade{
+    display:none;
+    width:310px;
+    height:140px;
+    margin:auto;
+    box-sizing: border-box;
+}
+.ReEs-navi-normal-trade-select-slider{
+    width:300px;
+    height:30px;
+    margin:auto;
+}
+.ReEs-navi-normal-trade-select-namediv{
+    height:40px;
+    padding-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size:18px;
+    color:#000;
+    font-weight:600;
+}
+.ReEs-navi-normal-trade-select-slider > .tradeSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReEs-navi-normal-trade-select-slider > .tradeSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+.ReEs-navi-normal-trade-select-slider > .tradeSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+
+}
+.ReEs-navi-normal-trade-select-slider> .tradeSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color:  #52b0fb;
+    border-radius: 50%;
+}
+.ReEs-navi-normal-trade-select-slider>.tradeSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReEs-navi-normal-trade-select-slider>.tradeSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReEs-navi-normal-trade-select-slider>input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 299px;
+    opacity: 0;
+}
+
+.ReEs-navi-normal-trade-select-slider>input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.ReEs-navi-normal-trade-select-slider-txt{
+    box-sizing:border-box;
+    text-align:center;
+    margin: 0 auto;
+    padding-top:11px;
+    width:300px;
+    height:40px;
+    border-radius:6px;
+    font-size:14px;
+    border:1px solid  #52b0fb;
+    background-color: #52b0fb;
+    color:#FFFFFF;
+    font-weight:600;
+}
+
+/* 슬라이더 끝 */
+
+

@@ -1,0 +1,306 @@
+*{
+    margin:0;
+    padding:0;
+}
+.ReEs_List{
+    display:none;
+    position:absolute;
+    top:0;
+    right:0;
+    width:900px;
+    height:100%;
+    background-color:#f7f7f7;
+    border-left:1px solid #d1d1d1;
+    z-index:90;
+    overflow: hidden;
+}
+.ReEs_List-rightButton{
+    box-sizing: border-box;
+    position:absolute;
+    display:none;
+    top:25px;
+    right: 925px;
+    background-color:#20a7ff;
+    border-color: #0b2d93;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    height: 32px;
+    min-width: 72px;
+    padding: 0 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align:center;
+    padding-top:5px;
+    z-index:90;
+}
+.ReEs_List-rightButton:hover{
+    background-color:#FEC72F;
+    color:#000;
+}
+.ReLi_extent_button_div{
+    height:50px;
+    box-sizing: border-box;
+    text-align:right;
+    padding-top:15px;
+    padding-right:40px;
+    font-size:30px;
+    color:#52b0fb;
+    
+}
+.ReLi_extent_button_div> .fa-rotate{
+    transition:1s;
+}
+.ReLi_extent_button_div> .fa-rotate:hover{
+    transform:rotate(30deg);
+    color:#1a55eb;
+}
+.ReLi_content_div{
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 25px 300px 25px;
+    position:relative;
+}
+.ReLi_content_div_all {
+    width: 100%;
+    height: 114%;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: -30px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ReLi_content_div_all::-webkit-scrollbar{width:12px;}
+.ReLi_content_div_all::-webkit-scrollbar-thumb{background-color:#52b0fb;
+    border-radius:10px;
+    background-clip:padding-box;
+    border:2px solid transparent;
+    }
+.ReLi_content_div_all::-webkit-scrollbar-track{border-radius:10px;
+    box-shadow:inset 0px 0px 5px white;
+    }
+.ReLi_content_div:hover .ReLi_content_div_all_cover{opacity:0;
+    -webkit-transition:all .5s;
+}
+
+.ReLi_content_div_all_cover {
+    width: 17px;
+    height: 114%;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    -webkit-transition:all .5s;
+    opacity: 1;
+    background-color: #f7f7f7;
+    border: 0px solid black;
+}
+
+.ReLi_content{
+    width: 262px;
+    height: 428px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 12px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+.ReLi_contents{
+    width:262px;
+    height:250px;
+    border:1px solid #d1d1d1;
+    border-radius:5px;
+    box-sizing: border-box;
+    display:inline-block;
+    position: relative;
+}
+.ReLi_img{
+    width:242px;
+    margin:10px auto;
+    height:160px;
+    background:url('../img/home.jpg') no-repeat;
+    background-size:cover;
+}
+.ReLi_imgs{
+    width:242px;
+    margin:10px auto;
+    height:25px;
+    background:url('../img/home.jpg') no-repeat;
+    background-size:cover;
+}
+img{
+border-radius:5px;
+}
+.ReLi_ranking{
+    float:right;
+    padding-top:5px;
+    margin-top:3px;
+    margin-bottom:12px;
+    margin-right:5px;
+    box-sizing: border-box;
+    width:50px;
+    height:25px;
+    font-size:12px;
+    border:1px solid #ed8e8e;
+    color:#ed8e8e;
+    font-weight: 600;
+    border-radius:25px;
+    text-align:center;
+}
+.ReLi_text{
+    height:138px;
+    padding-top:45px;
+    padding-left:17px;
+    padding-right:10px;
+    box-sizing:border-box;
+}
+.ReLi_texts{
+    padding-left:10px;
+    padding-right:10px;
+    box-sizing:border-box;
+}
+.ReLi_accuracy{
+    float:left;
+    padding-top:5px;
+    margin-top:3px;
+    box-sizing: border-box;
+    width:90px;
+    height:25px;
+    font-size:12px;
+    background-color: #4876ef;
+    color: #f7f7f7;
+    border-radius:25px;
+    text-align: center;
+}
+.ReLi_accuracies{
+    display:block;
+    padding-top:5px;
+    margin-top:3px;
+    box-sizing: border-box;
+    width:90px;
+    height:25px;
+    font-size:12px;
+    background-color: #4876ef;
+    color: #f7f7f7;
+    border-radius:25px;
+    text-align: center;
+}
+.ReLi_TrType{
+    margin-bottom:5px;
+    font-size:18px;
+    color:#081638;
+    font-weight:600;
+    display:inline-block;
+}
+.ReLi_TrTypes{
+    margin-bottom:5px;
+    font-size:18px;
+    color:#081638;
+    font-weight:600;
+    display:block;
+}
+.ReLi_text{
+    padding-top:45px;
+    padding-left:10px;
+    padding-right:10px;
+    box-sizing: border-box;
+}
+.ReLi_cost{
+    display: block;
+    font-size:14px;
+    margin-left:4px;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#484848;
+}
+.ReLi_extent{
+    margin-top:5px;
+    margin-bottom:9px;
+    font-size:13px;
+    color:#444242;
+    margin-left:5px;
+    font-weight:600;
+}
+.ReLi_address{
+    margin-top:5px;
+    font-size:14px;
+    font-weight:600;
+    color:#959595;
+}
+.ReLi_addreseies{
+    padding-left:14px;
+    margin-top:5px;
+    padding-left:10px;
+    font-size:14px;
+    font-weight:600;
+    color:#959595;
+}
+.ReLi_agent{
+    margin-top:10px;
+    height:50px;
+}
+.ReLi_agent_img{
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    border:1px solid black;
+    float: left;
+}
+.ReLi_agent_div{
+    margin-top:5px;
+    margin-right:5px;
+    float:right;
+    height:40px;
+}
+.ReLi_agent_company{
+    font-size:13px;
+    font-weight:600;
+}
+.ReLi_agent_name{
+    font-size:15px;
+    float:right;
+}
+.ReLi_agent_heart{
+    float:right;
+    padding-top:10px;
+    width:30px;
+    height:50px;
+    right:0;
+    font-size:30px;
+    z-index:999;
+    color:#b8b7bb;
+}
+
+.ReLi-move-dtl > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.ReLi_paging_div{
+    margin: 0 auto;
+    width:300px;
+    height:40px;
+    border:1px solid black;
+    box-sizing: border-box;
+}
+.ReLi_paging{
+    box-sizing: border-box;
+    float:left;
+    width:40px;
+    height:38px;
+    text-align: center;
+    padding-top:10px;
+    border-right:1px solid black;
+}
+.paging_on{
+    background-color:#387ccf;
+    color:white;
+    font-weight:600;
+}

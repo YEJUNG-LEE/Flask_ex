@@ -1,0 +1,371 @@
+
+/* 헤더 클래스 , 헤더 영역 높이 90px */
+.header{
+    width: 100%;
+    height:90px;
+}
+
+/* 전체 영역 wrap*/
+.ReEs-insert-wrap{
+    width: 1280px;
+    height: 1700px;
+    margin: auto;
+    text-align: left;
+}
+
+.ReEs-insert-header{
+    width: 1100px;
+    padding-top: 35px;
+    box-sizing: border-box;
+    height:96px;
+    border: 0px solid red;
+    margin: auto;
+}
+
+.ReEs-insert-SetRoom{
+    width: 1000px;
+    box-sizing: border-box;
+    border: 0px solid blue;
+    margin: auto;
+}
+
+.ReEs-insert-h2{
+    box-sizing: border-box;
+    font-size: 40px;
+    border: 0px solid black;
+    margin: auto;
+    padding: 10px 0 0 90px;
+    font-weight:600;
+}
+.ReEs-insert-box{
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 22px;
+    border: 1px solid #52b0fb;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight:600;
+    background-color:#52b0fb;
+    color:#FFFFFF;
+}
+
+#lreaNick {
+    width: 247px;
+    margin-left: 30px;
+}
+
+#lreaName {
+    width: 274px;
+    margin-left: 30px;
+}
+
+#reNum {
+    margin-left: 30px;
+}
+
+.ReES-insert-form{
+    border: 0px solid black;
+    width: 1000px;
+    height: 1380px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+h3{
+margin-left:8px;
+font-size:16px;
+font-weight:600;
+}
+
+/* 첨부파일 div 여백 */
+.form-group{
+    margin: 14px 0px 14px 30px;
+}
+
+.ReEs-insert-table{
+    margin-top: 0px;
+    width: 970px;
+    margin: auto;
+}
+
+.ReEs-insert-tr{
+    box-sizing: border-box;
+    border: 0px solid black;
+    width: auto;
+}
+
+.ReEs-insert-th{
+    height:20px;
+    width: 73px;
+    padding: 25px 0 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    border: 0px solid black;
+}
+.ReEs-insert-td{
+    width:481px;
+    height:74px;
+    text-align: left;
+    border: 0px solid black;
+}
+
+.ReCs-button{
+    box-sizing:border-box;
+    margin-top:18px;
+    margin-right:5px;
+    width:110px;
+    height:35px;
+    border-radius:45px;
+    border:1px solid #d1d1d1;
+    background-color:#FFFFFF;
+    display:inline-block;
+    font-size:12px;
+    padding-top:10px;
+    letter-spacing:2px;
+    font-weight:600;
+    color:#d1d1d1;
+    text-align:center;
+}
+.ReCs-button:hover{
+    cursor:pointer;
+}
+#reMon_price{
+    display:none;
+}
+#reTrade{
+    display:none;
+}
+/* 소재지 , 도로명주소 입력 칸 */
+.ReEs-insert-div{
+    padding: 10px 0px 10px 30px;
+    float:left
+}
+
+.ReEs-insert-div2{
+    display: flex;
+}
+/* 시, 도 */
+#reSido{
+    width: 96px;
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+}
+/* 군,구 */
+#reGungu{
+    width: 100px;
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+}
+/* 동 */
+#reDong{
+    width: 144px;
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+}
+/* 상세주소 */
+
+#roadAddress {
+    width: 351px;
+    margin-right: 14px;
+    padding-left: 5px;
+}
+
+#reDtl_Adr{
+    width: 285px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 2px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+}
+#reDtl_Adr:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+
+
+/* 도로명 주소 , 설명 제목 */
+.ReEs-insert-div > p {
+    margin: 10px 0px;
+}
+
+/* 주소 관련 설명 */
+.ReEs-insert-ul{
+    padding: 24px 7px 10px 0px;
+    width: 100%;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+/* 주소 관련 설명 내용 */
+.ReEs-insert-li{
+    font-size:13px;
+    letter-spacing: 2px;
+    color: #1d1d1d
+}
+
+.ReEs-insert-td03{
+    width:481px;
+    height:74px;
+    text-align: left;
+
+}
+
+.ReEs-insert-input, .ReEs-insert-select, .ReEs-insert-inputlg{
+    width:182px;
+    height: 44px;
+    padding: 0 10px;
+    border: 1px solid #d1d1d1;
+    font-size: 14px;
+    border-radius: 5px;
+    color:#6c6c6c;
+}
+
+select:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+
+.ReEs-insert-name{
+    width:277px;
+    height: 44px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-right: 27px;
+}
+
+.ReEs-insert-select{
+    width:130px;
+}
+
+.ReEs-insert-inputlg{
+    width: 200px;
+    margin-left: 10px;
+}
+
+.ReEs-insert-inputsm{
+    width: 30px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.ReEs-insert-detailAddress{
+    padding:12px;
+    float: left;
+    width:400px;
+    height:250px;
+    margin-right: 15px;
+}
+
+.ReEs-insert-map{
+    padding: 10px;
+    float: left;
+    width: 356px;
+    height: 220px;
+    border: 1px solid black;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.ReEs-insert-btnsm{
+    width: 73px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    display: inline-flex;
+     padding-top: 10px;
+}
+.ReEs-insert-nowfloor , .ReEs-insert-totalfloor{
+    padding:10px 0 6px 0;
+}
+input{
+    border:1px solid #d1d1d1;
+    border-radius:4px;
+    color:#6c6c6c;
+    caret-color:#d1d1d1;
+    margin-top:3px;
+        }
+
+input:focus{
+    outline:none;
+    border-color:#52b0fb;
+}
+
+select#reFlrType {
+    margin-left: 30px;
+    margin-top: 13px;
+}
+
+button.btn {
+    width: 120px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 34px;
+    color: #FFFFFF;
+    background-color: #52b0fb;
+    border-radius: 5px;
+    border: 1px solid #52b0fb;
+}
+
+button.btn:hover{
+    background-color: #FEC72F;
+    color: black;
+    border: 1px solid #FEC72F;
+}
+
+#ReEs-insert-td-cat01{
+    padding-left:30px;
+    padding-bottom:30px;
+    padding-top:30px;
+}
+
+#ReEs-insert-td-cat02{
+    padding-left:30px;
+    padding-bottom:30px;
+}
+
+.ReEs-insert-th-tit{
+    padding-top:50px;
+}
+
+#ReEs-insert-td-hid{
+    padding-bottom:10px;
+}
+
+#save-button{
+    margin-left:500px;
+    width:90px;
+    margin-top:20px;
+}
+

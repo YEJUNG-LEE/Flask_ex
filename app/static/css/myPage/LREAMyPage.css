@@ -1,0 +1,300 @@
+            *{margin:0; padding:0;}
+
+            a:visited, a:link, a:hover, a:active{
+                text-decoration: none;
+                color:#787878;
+            }
+            a:hover{
+                color:#52b0fb;
+            }
+
+            .header{
+                width:100%;
+                height:90px;
+            }
+
+            .LRMy-div-all{width:1280px;
+                        height:1020px;
+                        border:0px solid black;
+                        margin:auto;
+                        box-sizing:border-box;}
+
+            .LRMy-div-con-all{width:1204px;
+                            margin:auto;
+                            border:0px solid rgb(48, 67, 240);
+                            box-sizing:border-box;}
+
+            /* 왼쪽 사이드바 영역 css */
+            .LRMy-div-all-pro{width:144px;
+                            height:380px;
+                            margin-top:30px;
+                            border:0px solid black;
+                            float:left;
+                            box-sizing:border-box;}
+
+            /* 왼쪽 사이드바 프로필 사진 영역 css */
+            .LRMy-div-pro{width:144px;
+                        height:215px;
+                        border-radius:6px;
+                        border:1px solid #52b0fb;
+                        box-sizing:border-box;}
+
+            .LRMy-div-pro01{width:144px;
+                            height:124px;
+                            border:0px solid black;}
+
+            .LRMy-div-pro-pic{width:62px;
+                            height:62px;
+                            border-radius:6px;
+                            border:1px solid #52b0fb;
+                            box-sizing:border-box;
+                            margin-left:41px;
+                            margin-top:40px;
+                            background-size:cover;}
+
+            .LRMy-pro-nam{font-size:15px;
+                        font-weight:600;
+                        margin-top:4px;
+                        color:#3A6BA5;
+                        text-align:center;}
+
+            .LRMy-pro-rat{font-size:13px;
+                        text-align:center;
+                        color:#858484;}
+
+
+            .LRMy-div-pro02{width:142px;
+                            height:49px;
+                            border-bottom-left-radius:5px;
+                            border-bottom-right-radius:5px;
+                            background-color:#52b0fb;}
+
+            /* 왼쪽 사이드바 메뉴 영역 css */
+            .LRMy-div-all-pag{width:144px;
+                            height:340px;
+                            border:0px solid black;
+                            box-sizing:border-box;}
+
+            .LRMy-div-pag{width:144px;
+                        height:348px;
+                        border:1px solid #d1d1d1;
+                        box-sizing:border-box;
+                        margin-top:16px;
+                        padding-top:10px;
+                        text-align:left;
+                        border-radius:6px;}
+
+            .LRMy-pag-tit{font-size:14px;
+                        font-weight:600;
+                        color:#6c6c6c;
+                        margin-top:20px;
+                        margin-left:10px;}
+
+            .LRMy-pag-con{font-size:12px;
+                        color:#787878;
+                        margin-left:17px;
+                        margin-top:10px;}
+
+            .LRMy-pag-con-cover{
+                        color:d1d1d1;
+            }
+
+            /* 오른쪽 콘텐츠 영역 css */
+            .LRMy-div-con{width:1024px;
+                        height:500px;
+                        border:0px solid black;
+                        margin-left:34px;
+                        float:left;
+                        box-sizing:border-box;}
+
+            .LRMy-div-tit{width:1024px;
+                        border:0px solid black;
+                        box-sizing:border-box;}
+
+            .LRMy-tit-font{font-size:30px;
+                font-weight:bold;
+                margin-left:20px;
+                margin-top:50px;
+                padding-bottom:20px;
+                text-align:left;}
+
+            /* 내정보 text 영역 css */
+            .LRMy-div-con-inf{width:1024px;
+                            height:115px;
+                            border:0px solid black;
+                            text-align:left;}
+
+            .LRMy-div-inf-top{width:1024px;
+                            height:78px;
+                            border:0px solid black;
+                            border-radius:6px;
+                            box-sizing:border-box;
+                            background-color:#52b0fb;}
+
+            .LRMy-inf-tit{font-size:20px;
+                        font-weight:700;
+                        padding-top:25px;
+                        color:#FFFFFF;
+                        margin-left:20px;}
+
+            .LRMy-div-inf-bot{width:1024px;
+                            height:80px;
+                            border:0px solid black;
+                            box-sizing:border-box;}
+
+            .LRMy-ul-inf{width:1024px;
+                        height:80px;
+                        list-style:none;
+                        float:left;}
+
+            .LRMy-li-inf{width:170.6px;
+                        height:80px;
+                        float:left;
+                        border-top:none;
+                        border:1px solid #94BBCC;
+                        border-left:none;
+                        box-sizing:border-box;}
+
+            .LRMy-inf-con1{font-size:14px;
+                        font-weight:700;
+                        padding-top:20px;
+                        margin-left:20px;}
+
+            .LRMy-inf-con2{font-size:24px;
+                        font-weight:700;
+                        margin-left:24px;
+                        color:#3A6BA5;}
+
+            .LRMy-ul-inf>li:first-child{border-left:1px solid #94BBCC;
+                                        border-bottom-left-radius:6px;}
+            .LRMy-ul-inf>li:last-child{border-bottom-right-radius:6px;}
+
+            /* 내 맞춤 조건 영역 css */
+            .LRMy-div-cal-mes{width:1024px;
+                            height:364px;
+                            margin-top:96px;
+                            border:0px solid black;
+                            box-sizing:border-box;}
+
+            .LRMy-div-cal{width:630px;
+                        height:362px;
+                        float:left;
+                        border:0px solid black;
+                        box-sizing:border-box;}
+
+            .LRMy-div-cal-tit{width:628px;
+                        height:40px;
+                        border:0px solid black;
+                        box-sizing:border-box;}
+
+            .LRMy-tit-p{font-size:18px;
+                        font-weight:700;
+                        float:left;
+                        margin-left:5px;
+                        padding-top:9px;}
+
+            .LRMy-out{font-size:12px;
+                    font-weight:900;
+                    color:#FEC72F;
+                    float:right;
+                    margin-right:10px;
+                    padding-top:17px;}
+
+            .LRMy-div-cal-con{width:628px;
+                        height:322px;
+                        overflow:hidden;
+                        background-size:contain;
+                        border:1px solid #94BBCC;
+                        box-sizing:border-box;}
+
+
+            /* 내가 올린 매물 목록 영역 css */
+            .LRMy-div-sal{width:1024px;
+                        height:632px;
+                        overflow:hidden;
+                        position: relative;
+                        border:0px solid black;
+                        box-sizing:border-box;}
+
+            .LRMy-div-sal-tit{width:1024px;
+                            height:40px;
+                            border:0px solid black;
+                            box-sizing:border-box;}
+
+            .LRMy-div-sal-list {
+                width: 1024px;
+                height: 635px;
+                overflow:auto;
+                overflow-x:hidden;
+                border:0px solid black;
+            }
+
+            .LRMy-div-sal-list::-webkit-scrollbar{width:12px;}
+            .LRMy-div-sal-list::-webkit-scrollbar-thumb{background-color:#52b0fb;
+                border-radius:10px;
+                background-clip:padding-box;
+                border:2px solid transparent;
+                }
+            .LRMy-div-sal-list::-webkit-scrollbar-track{border-radius:10px;
+                box-shadow:inset 0px 0px 5px white;
+                }
+            .LRMy-div-sal:hover .fakeScroller-cover{opacity:0;
+                -webkit-transition:all .5s;
+            }
+
+           .fakeScroller-cover{
+                width: 12px;
+                height: 632px;
+                position: absolute;
+                top:0; right:0;
+                -webkit-transition:all .5s;
+                opacity:1;
+                background-color:#FFFFFF;
+                border:0px solid black;
+            }
+
+            .LRMy-ul-sal{width:1024px;
+                        height:224px;
+                        float:left;
+                        list-style:none;}
+
+            .LRMy-li-sal{width:156px;
+                        height:242px;
+                        float:left;
+                        margin-left:10px;
+                        margin-top:20px;
+                        position:relative;
+                        border-radius:6px;
+                        border:1px solid #d1d1d1;
+                        box-sizing:border-box;}
+
+            .LRMy-ul-sal>li:first-child{margin-left:0;}
+
+            .LRMy-sal-img{width:154px;
+                        height:150px;
+                        border-top-left-radius:5px;
+                        border-top-right-radius:5px;
+                        background-size:cover;}
+
+
+            .LRMy-sal-tit-p{font-size:13px;
+                            font-weight:600;
+                            color:#3A6BA5;
+                            padding-top:10px;}
+
+            .LRMy-sal-con-pdiv{width:138px;
+                            height:56px;
+                            margin-top:3px;
+                            margin-left:7px;
+                            float:left;
+                            overflow:hidden;
+                            border:0px solid black;
+                            box-sizing:border-box;}
+
+            .LRMy-sal-con-p{font-size:12px;
+                            margin-top:6px;
+                            color:#858484;
+                            word-break:break-all;}
+
+
+

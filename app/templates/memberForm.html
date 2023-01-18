@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link type="text/css" th:href="@{/css/MeMb/memberForm.css}" rel="stylesheet">
+<!--    <link type="text/css" href="css/MeMb/memberForm.css" rel="stylesheet">-->
+    <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!--<link rel="stylesheet" type = "text/css" href="css/MeMb/reset.css">-->
+    <!--<link th:href="@{/css/MeMb/reset.css}" rel="stylesheet">-->
+    <!--<link rel="stylesheet" type = "text/css" href="/css/MeMb/memberForm.css">-->
+<th:brock layout:fragment="css"></th:brock>
+</head>
+<!-- 사용자 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script th:inline="javascript">
+        $(document).ready(function(){
+            var errorMessage = [[${errorMessage}]];
+            if(errorMessage != null){
+                alert(errorMessage);
+            }
+        });
+    </script>
+</th:block>
+
+<div class="content" layout:fragment="content">
+    <section>
+        <div class="MeMb-div">
+            <div class="MeMb-div-logo"><a href="/"></a></div>
+        </div>
+        <div class="MeMb-div2">
+            <div class="MeMb-sing">회원가입</div>
+            <div class="MeMb-sign-form-all">
+                <form class="MeMb-sign-form" action="/members/new" role="form" method="post" th:object="${memberFormDto}">
+                    <div id="rolerole">
+                        <div class="MeMb-memb"  th:each="type : ${role}">
+                            <input class="MeMb-gene" type="radio" th:field="*{role}" th:value="${type.name()}">
+                            <label th:for="${#ids.prev('role')}" th:text="${type.description}"></label>
+                        </div>
+                        <p th:if="${#fields.hasErrors('role')}" th:errors="*{role}" class="fieldError" id="fiele">Incorrect data</p>
+                    </div>
+                    <div class="MeMb-label">
+                        <label th:for="email">이메일</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" th:field="*{email}" class="form-control MeMb-email" placeholder="이메일을 입력해 주세요.">
+                        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="fieldError">Incorrect data</p>
+                    </div>
+                    <div class="MeMb-label">
+                        <label th:for="password">비밀번호</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password_1" th:field="*{membPassword}" class="form-control MeMb-email pw" placeholder="비밀번호를 입력해 주세요.">
+                        <p th:if="${#fields.hasErrors('membPassword')}" th:errors="*{membPassword}" class="fieldError">Incorrect data</p>
+                    </div>
+                    <div class="MeMb-label">
+                        <label>비밀번호 확인</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password_2" class="form-control MeMb-email pw" placeholder="비밀번호를 입력해 주세요."><br>
+                        <span class="fieldError" id="alert-success" style="display: none; color: blue;">비밀번호가 일치합니다.</span>
+                        <span class="fieldError" id="alert-danger" style="display:none;">비밀번호가 일치하지 않습니다.</span>
+                    </div>
+                    <script>
+                        $('.pw').focusout(function () {
+                            var pwd1 = $("#password_1").val();
+                            var pwd2 = $("#password_2").val();
+
+                            if ( pwd1 != '' && pwd2 == '' ) {
+                                null;
+                            } else if (pwd1 != "" || pwd2 != "") {
+                                if (pwd1 == pwd2) {
+                                    $("#alert-success").css('display', 'inline-block');
+                                    $("#alert-danger").css('display', 'none');
+                                } else {
+                                    $("#alert-success").css('display', 'none');
+                                    $("#alert-danger").css('display', 'inline-block');
+                                }
+                            }
+                        });
+                </script>
+                <div class="MeMb-label">
+                    <label th:for="nick">닉네임 / 상호명</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{membNick}" class="form-control MeMb-email" id="nickname" placeholder="닉네임/상호명을 입력해 주세요.">
+                    <p>일반 회원은 닉네임, 공인중개사는 상호명을 적어주세요.</p>
+                    <p th:if="${#fields.hasErrors('membNick')}" th:errors="*{membNick}" class="fieldError">Incorrect data</p>
+                </div>
+                <div class="MeMb-label">
+                    <label th:for="name">이름</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{membName}" class="form-control MeMb-email" placeholder="이름을 입력해 주세요.">
+                    <p th:if="${#fields.hasErrors('membName')}" th:errors="*{membName}" class="fieldError">Incorrect data</p>
+                </div>
+                <div class="MeMb-label">
+                    <label th:for="birth">생년월일</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{membBirth}" class="form-control MeMb-email" placeholder="생년월일을 입력해 주세요. ex)010101">
+                    <p th:if="${#fields.hasErrors('membBirth')}" th:errors="*{membBirth}" class="fieldError">Incorrect data</p>
+                </div>
+                <div class="MeMb-label">
+                    <label th:for="nick">주소</label>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" id="sample6_postcode" placeholder="우편번호">
+                    <input type="text" class="MeMb-addr" th:field="*{membAddress1}" id="sample6_address" placeholder="주소">
+                    <input type="button" class="MeMb-adse" onclick="sample6_execDaumPostcode()" value="주소 찾기"><br>
+                    <input type="text" class="form-control MeMb-number1" th:field="*{membAddress2}" id="sample6_detailAddress" placeholder="상세주소"
+                        value style="width:308px; height:35px; padding-left:5px">
+                    <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
+                    <p th:if="${#fields.hasErrors('membAddress1')}" th:errors="*{membAddress1}" class="fieldError">Incorrect data</p>
+
+                    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                    <script>
+                        function sample6_execDaumPostcode() {
+                            new daum.Postcode({
+                                oncomplete: function(data) {
+                                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                    var addr = ''; // 주소 변수
+                                    var extraAddr = ''; // 참고항목 변수
+
+                                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                        addr = data.roadAddress;
+                                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                        addr = data.jibunAddress;
+                                    }
+
+                                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                    if(data.userSelectedType === 'R'){
+                                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                            extraAddr += data.bname;
+                                        }
+                                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                        }
+                                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                        if(extraAddr !== ''){
+                                            extraAddr = ' (' + extraAddr + ')';
+                                        }
+                                        // 조합된 참고항목을 해당 필드에 넣는다.
+                                        document.getElementById("sample6_extraAddress").value = extraAddr;
+
+                                    } else {
+                                        document.getElementById("sample6_extraAddress").value = '';
+                                    }
+
+                                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                    document.getElementById('sample6_postcode').value = data.zonecode;
+                                    document.getElementById("sample6_address").value = addr;
+                                    // 커서를 상세주소 필드로 이동한다.
+                                    document.getElementById("sample6_detailAddress").focus();
+                                }
+                            }).open();
+                        }
+                    </script>
+                    </div>
+                    <div class="MeMb-label">
+                        <label th:for="phone">전화번호</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" th:field="*{membPhone}" class="form-control MeMb-email" placeholder="전화번호를 입력해 주세요. ex)010-0000-0000">
+                        <p th:if="${#fields.hasErrors('membPhone')}" th:errors="*{membPhone}" class="fieldError">Incorrect data</p>
+                    </div>
+                    <div>
+                        <input class="MeMb-button" type="submit" value="회원가입">
+                    </div>
+                <div class="MeMb-sign-form-cover"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!--<link type="text/css" th:href="@{/css/MeMb/reset.css}" rel="stylesheet">-->
+<link type="text/css" th:href="@{/css/MeMb/memberLoginForm.css}" rel="stylesheet">
+
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+
+
+</th:block>
+
+<div layout:fragment="content" class="content">
+
+    <link rel="shortcut icon" href="#">
+
+    <section>
+        <div class="MeMb-div"> <div class="MeMb-div-logo"><a href="/"></a></div></div>
+        <div class="MeMb-div2">
+            <div class="MeMb-div_div01"></div>
+            <h1 class="MeMb-login">로그인</h1>
+            <h4 class="MeMb-go-siup">신규 사용자이신가요? <a href="/members/new">계정 만들기</a></h4>
+            <form class="MeMb-login-form" action="/members/login" method="POST">
+                <div>
+                    <input class="MeMb-email" id="email" type="text" name="email" placeholder="이메일을 입력해주세요">
+                </div>
+                <div>
+                    <input class="MeMb-pass" id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요">
+                </div>
+                <p th:if="${loginErrorMsg}" class="error" th:text="${loginErrorMsg}"></p>
+                <div>
+                    <input class="btn MeMb-button" type="submit" value="로그인">
+                </div>
+                <div class="MeMb-bot">
+                    <a href="/gogeag">로그인에 문제가 있으신가요?</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+</html>

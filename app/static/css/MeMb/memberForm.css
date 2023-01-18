@@ -1,0 +1,191 @@
+        @import url(reset.css);
+
+        .fieldError {
+            color: #ef4959;
+            margin-left:5px;
+        }
+        #fiele{
+            color:#ef4959;
+            font-size:14px;
+            margin-left:32px;
+        }
+
+        .content{
+            height : 100%;
+        }
+        section{
+            min-height: 100%;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(/img/main_img.jpg);
+            background-size: cover;
+        }
+        .MeMb-div{
+            padding-top: 76px;
+        }
+        div{
+            margin: 0 auto;
+        }
+        .MeMb-div-logo{
+            width: 130px; height: 130px;
+            background-image: url(/img/logo05.png);
+            background-size: cover;
+        }
+
+        .MeMb-div-logo > a{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        input{border:1px solid #d1d1d1;
+            border-radius:4px;
+            color:#000;
+            caret-color:#afadad;
+        }
+
+        input:focus{outline:none;
+            border-color:#52b0fb;
+        }
+
+        .MeMb-div2{
+            width: 510px; height: 625px;
+            background-color: white;
+            border-radius: 7px;
+            border : 1px solid #FFFFFF;
+            box-sizing:border-box;
+            margin-top:30px;
+        }
+        .MeMb-sing{
+            font-size: 40px;
+            padding-top: 36px;
+            margin-left: 172px;
+            float: left;
+            font-weight: 600;
+        }
+        .MeMb-Numb{
+            font-size: 25px;
+            width: 150px; height: 50px;
+            padding-top: 45px;
+            margin-right: 50px;
+            text-align: right;
+        }
+        .MeMb-memb{
+            text-align: center;
+            margin-bottom: 10px;
+            margin-left:10px;
+            font-size:14px;
+            display: inline-block;
+        }
+
+        #rolerole{
+            width: 200px;
+            margin:auto;
+        }
+
+        input[type="radio"]:checked + label{
+            accent-color: #52b0fb;
+            color: #52b0fb;
+        }
+
+        .MeMb-gene{
+            font-size: 19px;
+        }
+        .MeMb-form{
+            width: 420px; height: 400px;
+        }
+        .MeMb-sign-form-all{
+            width: 440px;
+            height: 420px;
+            position: relative;
+        }
+        .MeMb-sign-form{
+            height: 420px;
+            margin-top: 125px;
+            overflow:auto;
+            overflow-x:hidden;
+        }
+        .MeMb-sign-form::-webkit-scrollbar{width:12px;}
+        .MeMb-sign-form::-webkit-scrollbar-thumb{background-color:#52b0fb;
+            border-radius:10px;
+            background-clip:padding-box;
+            border:2px solid transparent;
+            }
+        .MeMb-sign-form::-webkit-scrollbar-track{border-radius:10px;
+            box-shadow:inset 0px 0px 5px white;
+            }
+        .MeMb-sign-form-all:hover .MeMb-sign-form-cover{opacity:0;
+            -webkit-transition:all .5s;
+        }
+
+        .MeMb-sign-form-cover{
+            width: 12px;
+            height: 420px;
+            position: absolute;
+            top:0; right:0;
+            -webkit-transition:all .5s;
+            opacity:1;
+            background-color:#FFFFFF;
+            border:0px solid black;
+        }
+        .MeMb-email{
+            width: 418px; height: 35px;
+            font-size: 14px;
+            padding-left:5px;
+        }
+        .MeMb-label{
+            margin-top: 20px;
+            font-size:16px;
+            font-weight:600;
+        }
+        .MeMb-button{
+            width: 422px; height: 50px;
+            margin-top: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: #52b0fb;
+            color: white;
+            font-size: 16px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .MeMb-button:hover{
+            background-color: #FEC72F;
+            color: black;
+            font-weight: bolder;
+        }
+        p{
+            margin: 0; padding: 0;
+        }
+        .form-group{
+            margin-top:4px;
+            font-size:12px;
+            color:#5c5c5c;
+        }
+        .MeMb-addr{
+				width: 308px; height: 35px;
+				margin-top: 5px;
+				font-size: 14px;
+				padding-left:5px;
+				float: left;
+        }
+
+        .MeMb-adse{
+            all:unset;
+            font-size: 14px;
+            width: 90px;  height: 39px;
+            border-radius:4px;
+            margin-top: 5px;
+            margin-left: 10px;
+            text-align:center;
+            font-weight:bolder;
+            background-color:#52b0fb;
+            color:#FFFFFF;
+        }
+        .MeMb-adse:hover{
+                    background-color: #FEC72F;
+                    color: black;
+
+
+        .MeMb-number1{
+            width: 418px; height: 35px;
+            margin-top: 10px;
+            font-size: 17px;
+        }

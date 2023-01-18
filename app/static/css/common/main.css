@@ -1,0 +1,1371 @@
+@import url(reset.css);
+
+/*나눔바른고딕 웹폰트 소스*/
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+
+    @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+    @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('/cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+
+/* common */
+body{
+    font-size: 14px; 
+    font-family: Arial,'NanumBarunGothic'; 
+    color: #000;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin: 0;
+}
+a{
+    text-decoration: none; 
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* 헤더 w - 100% , height - 90px */
+/* Header */
+header {
+    /* padding: 0 32px; */
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    height: 88px;
+
+    /* 모든게 바뀌는 과정을 3초 , 중간이빠른 */
+    transition: .3s ease-in-out;
+}
+header:after{content: ""; display: block; clear: both;}
+
+.header-nav{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* 헤더에 슈링크클래스가 있을때 높이를 4em 으로 */
+/* 헤더 투명도 */
+header.shrink{
+    height: 75px;
+    background: rgba(255,255,255, .8);
+}
+
+/* 슈링크클래스가 있으면 li 의 라인하이트도 줄여주고 */
+header.shrink nav ul li{
+    line-height: 74px;
+}
+
+/* 로고 */
+h1.logo {
+    width: 159px;
+    height: 100%;
+    margin-left: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo a img{
+    width: auto;
+    height: 100%;
+}
+
+/* nav 네비 탭 */
+nav > ul {
+    float: left;
+}
+
+/* .EzHome-ul */
+.EzHome-ul-left {
+    width: 450px;
+    height: 100%;
+    margin-left: 360px;
+    padding: 0;
+    display: flex;
+}
+
+.EzHome-ul-left > li {
+    width: 88px;
+    height: 90px;
+    float: left;
+    display: block;
+    margin: 0 30px;
+    list-style: none;
+    line-height: 96px;
+        
+    /* 여기에도 트랜지션 */
+    transition: .3s ease-in-out;
+}
+
+/* .EzHome-ul2 */
+/* 광고문의 , 로그인 , 회원가입 */
+.EzHome-ul-right {
+    width: 100%;
+    height: 90px;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.EzHome-ul-right > li {
+    width: 140px;
+    height: 90px;
+    display: block;
+    float: left;
+    list-style: none;
+    line-height: 96px;
+    transition: .3s ease-in-out;
+}
+
+.advert_insert{
+    width: 140px;
+    height: 90px;
+    display: block;
+    float: left;
+    list-style: none;
+    line-height: 96px;
+
+    /* 여기에도 트랜지션 */
+    transition: .3s ease-in-out;
+}
+
+.EzHome-ul-left li a, .EzHome-ul-right li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* 로그인 버튼 */
+.main_login > .main_login_log{
+    width: 100px;
+    height: 48px;
+    line-height: 50px;
+    padding: 2px 20px;
+    border: 1px solid #9b9b9b ;
+    color: #9b9b9b ;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: .2s ease;
+}
+
+.member_user > a{
+    color: #4876ef;
+    width: 100px;
+}
+/* 광고문의 색 */
+.advert_insert > .advert_insert_a {
+    color: #fec72f;
+    width: 94px;
+    height: 48px;
+    line-height: 50px;
+    padding: 2px 20px;
+    border: 1px solid #fec72f;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+.EzHome-ul-right li a{
+    font-size: 18px;
+    font-weight: 600;
+}
+/* 비회원 광고문의 색 */
+.adver_insert_nm{
+    color: #52b0fb;
+}
+.adver_insert_nm:hover{
+    color: #fec72f;
+}
+/* 광고 등록 호버 */
+.advert_insert_a:hover{
+    color: #fff;
+    background-color: #fec72f;
+}
+/* 로그인 호버 */
+.main_login_log:hover{
+    background: #52b0fb;
+    color: #fff;
+    border: 1px solid #52b0fb;
+}
+
+/* 회원가입 */
+.header-signup > a:hover{
+    color: #fec72f;
+}
+
+/* 로그아웃 호버*/
+.header-logout > a:hover{
+    color: #fec72f;
+}
+
+/* EzHome-ul-left > a:hover */
+/* 부동산, 커뮤니티, 고객센터 hover */
+.EzHome-ul-left > li > a:hover{
+    text-decoration: none;
+    color: #52b0fb;
+}
+
+/* 챗봇 */
+/* 사이드 fixed */
+/* 챗봇 전체영역 */
+.quick_menu{
+    z-index: 9999;
+    position: fixed;
+    right: 224px;
+    top: 20%;
+    width: 76px;
+    height: 76px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    /* border: 1px solid black; */
+    
+}
+/* 이미지 */
+.cb-click-img{
+    cursor: pointer;
+    right:0;
+    bottom:0;
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+    width: 76px;
+    height: 76px;
+}
+.cRwgrT {
+    position: absolute;
+    inset: 0px;
+    margin: auto;
+}
+.jOuhMW {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    margin: 0px;
+    color: rgb(94, 86, 240);
+    cursor: pointer;
+    opacity: 1;
+}
+.cb-div-wrap.on{
+    display: block;
+    z-index: 9999;
+}
+#cb-btn-can {
+    width: 50px;
+    height: 30px;
+    float: right;
+    margin-top: 14px;
+    margin-right: 15px;
+    background-color: #4876EF;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+}
+/* 채팅창 박스 영역 */
+.cb-div-wrap {
+    position: absolute;
+    width: 410px;
+    border: 1px solid #ddd;
+    height: 525px;
+    background: #f8f8f8;
+    display:none;
+    right: 0;
+    top: 80px;
+    float: right;
+    box-sizing: border-box;
+}
+#cb-div-head{
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: 900;
+    border-bottom: 1px solid #ddd;
+}
+.cb-div-cl{
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: left;
+}
+.cb-mm{
+    text-align: right;
+}
+.cb-am{
+    text-align: left;
+    margin-bottom: 5px;
+}
+.cb-msg{
+    display: inline-block;
+    border-radius: 15px;
+    padding: 7px 15px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.cb-div-amsh{
+    position: relative;
+}
+
+.cb-div-amsh > .cb-msg {
+    background-color: #f1f0f0;
+    
+
+}
+.cb-mm > .cb-msg {
+    background-color: #4876EF;
+    color: #fff;
+}
+
+.cb-am {
+    height: 30px;
+    font-size: 12px;
+    display: block;
+}
+
+#cb-cf {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #f0f0f0;
+}
+
+#message {
+    width: 78%;
+    height: calc(100% - 1px);
+    border: none;
+    padding-bottom: 0;
+}
+
+#message:focus {
+    outline: none;
+}
+
+#cb-cf > input[type=submit] {
+    outline: none;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 17px;
+    width: 70px;
+    height: 50px;
+    border-radius: 4px;
+    background: #4876EF;
+}
+
+
+/* 메인 컨테이너 */
+main {
+    z-index: 1;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* 메인배경  */
+.main-section01{
+    width: 100%;
+    height: 930px;
+    background: url(/img/main_img.jpg) no-repeat 0 -200px;
+}
+.container-div {
+    width: 100%;
+    height: 930px;
+    background-color: rgba(41, 41, 44, 0.6) ;
+}
+
+/* 메인검색 컨텐츠영역  */
+.container-div2{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+/* 메인 타이틀 */
+.container-title{
+    position: absolute;
+    top: 240px;
+    width: 1280px;
+    height: 240px;
+}
+
+.container-title h2{
+    font-size: 72px;
+    text-align: left;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.6);
+}
+
+.container-title > p{
+    margin-top: 20px;
+    font-size: 72px;
+    text-align: left;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px rgba(44, 44, 44, 0.6);
+}
+/* 맞춤 강조 */
+.container-title > p > span{
+    color: #fec72f;
+    text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.6);
+}
+
+/* 검색창 */
+.container-search{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top: 520px;
+    /* margin-top: 520px; */
+}
+
+.containe-search2{
+    position: absolute;
+    top: 0px;
+    width: 900px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 2px rgba(44, 44, 44, 0.6);
+    border-radius: 10px;
+    /* width: 800px;
+    height: 80px;
+    position: absolute;
+    top: 0; */
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    left: 16px;
+    top: 22px;
+    font-size: 36px;
+    color: #52b0fb;
+}
+
+/* 검색입력창 */
+.search {
+    position: absolute;
+    left: 64px;
+    top: 12px;
+    width: 355px;
+    height: 58px;
+    font-size: 22px;
+    background-color:#fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #444;
+}
+
+/* 조건 , 거래유형 */
+.condition01{
+    position: absolute;
+    left: 390px;
+    width: 138px;
+    height: 80px;
+    /* border: 1px solid #000; */
+}
+.condition01 > a {
+    z-index: 11;
+    width: 130px;
+    height: 100%;
+    display: block;
+    font-size: 19px;
+    padding-top: 24px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+/* 임시 드롭다운 */
+/* 드롭다운 */
+#condition01-select{
+    position: relative;
+    top : -300%;
+    display: none;
+    width: 130px;
+    height: 240px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 10px 10px ;
+    transition: .3s ease-in-out;
+}
+
+#condition01-select.on{
+    top: 0;
+    display: block;
+}
+#condition01-select > a{
+    display: block;
+    width: 100%;
+    height: 80px;
+    font-size: 19px;
+    font-weight: 100;
+    padding: 30px;
+    border-top: 1px solid #ededed;;
+    box-sizing: border-box;
+    transition: .2s ease-in-out;
+}
+
+#condition01-select > a:hover{
+    width: 100%;
+    height: 80px;
+    background: #50adf7;
+    border-top: 1px solid #50adf7;
+    color: #fff;
+}
+
+.select-last:hover{
+    width: 100%;
+    height: 80px;
+    background: #50adf7;
+    border-top: 1px solid #50adf7;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+}
+/*// 임시 드롭다운 */
+
+
+/* 조건02 , 건물유형 */
+.condition02{
+    position: absolute;
+    left: 528px;
+    width: 138px;
+    height: 80px;
+    /* border: 1px solid #000; */
+}
+.condition02 > a {
+    width: 130px;
+    height: 100%;
+    display: block;
+    font-size: 19px;
+    padding-top: 24px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: .2s ease-in-out;
+}
+
+#condition02-select > a:hover{
+    width: 100%;
+    height: 80px;
+    background: #50adf7;
+    border-top: 1px solid #50adf7;
+    color: #fff;
+}
+
+.fa-angle-down{
+    color: #fec72f;
+    font-size: 26px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
+
+/* 임시 드롭다운 */
+/* 드롭다운 */
+#condition02-select{
+    position: relative;
+    top : -300%;
+    display: none;
+    width: 130px;
+    height: 240px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 10px 10px ;
+    transition: .3s ease-in-out;
+}
+
+#condition02-select.on{
+    top: 0;
+    display: block;
+}
+#condition02-select > a{
+    display: block;
+    width: 100%;
+    height: 80px;
+    font-size: 22px;
+    font-weight: 100;
+    padding: 20px;
+    border-top: 1px solid #ededed;;
+    box-sizing: border-box;
+    line-height: 1.8;
+}
+
+
+
+/* 검색 버튼 */
+.search-btn{
+    position: absolute;
+    top: 0;
+    padding-top:29px;
+    padding-left: 7px;
+    right: 0px;
+    width: 140px;
+    height: 80px;
+    border: 1px solid #52b0fb;
+    border-radius: 10px;
+    background: #52b0fb;
+    color: #fff;
+    font-size: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.search-btn:hover{
+    background:  #FEC72F;
+    border: 1px solid  #FEC72F;
+    color: #000;
+}
+
+/* main-section02 */
+/* 추천 광고 배너 */
+.main-section02{
+    width: 1280px;
+    height: 100%;
+    margin: 88px auto 0;
+    /* border: 1px solid #000; */
+}
+
+.section02-title {
+    display: flex;
+    -webkit-box-align: center;
+    height: 1110px;
+}
+.section02-title > h3 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: 2px;
+}
+.section02-title > h3 > a > span {
+    font-weight: 300;
+}
+
+/* 조건 정보 영역 */
+.section02-info {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+/* .section02-info a{
+    color:#4876ef;
+} */
+
+/* 조건 정보 box */
+.section02-info-box{
+    padding: 8px 12px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    font-size: 16px;
+    color: #e7e7e7;
+    user-select: none;
+    margin-right: 10px;
+}
+
+/* 더알아보기 */
+.section02-info-more{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #e7e7e7;
+    cursor: pointer;
+}
+/* 더알아보기 hover */
+.section02-info-more > a:hover{
+    color: #fec72f;
+}
+
+/* 광고 배너 영역 */
+.section02-banner-ul {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    margin-left: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.section02-banner-ul > li {
+    width: 280px;
+    height: 360px;
+}
+.section02-banner-ul > li > a {
+    display: block;
+}
+
+.section02-banner-hiden{
+    padding-top: 186px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section02-banner-hiden > div{
+    position: absolute;
+    inset: 0px;
+}
+
+.section02-banner-div{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: rgb(250, 250, 250);
+    background-size: 60px 60px;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-text {
+    margin-top: 20px;
+}
+
+.banner-text-p{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 4px;
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    line-height: 19px;
+}
+/* 거래유형 , 가격  */
+.banner-text > h1 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    color: rgb(34, 34, 34);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: left;
+}
+
+/* 매물 정보 */
+.banner-text-p2{
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    font-weight: 100;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+}
+
+.banner-hover{
+    display: block;
+}
+
+/* 광고 배너 사진만 hover  */
+.banner-hover:hover .cover{
+    background-color: rgba(72, 119, 239, 0.3) ;
+}
+.banner-hover-bg{
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 200ms ease-in-out 0s;
+    position: absolute;
+    inset: 0px;
+    z-index: 1;
+}
+
+/* main-section03 */
+/* 지역매물 info */
+.main-section03{
+    width: 1280px;
+    margin: 30px auto 300px;
+}
+
+.section03-contents{
+    padding: 30px 0px 40px 30px;
+    border-radius: 2px;
+    background-color: #fafafa;
+}
+
+.section03-title{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.section03-title-p{
+    font-size: 16px;
+    line-height: 22px;
+}
+.section03-title-p > a > span {
+    font-weight: 600;
+    color: #4876ef;
+}
+
+/* 오버플로우 히든 , 보여지는 영역 */
+.section03-hidden{
+    display: block;
+    height: 220px;
+    margin: 30px 0px 50px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* info 컨텐츠영역 */
+.section03-info{
+    display: flex;
+    position: relative;
+    width: 1502px;
+    height: 220px;
+    box-sizing: border-box;
+    transition: right 0.5s ease-out 0s;
+}
+
+/* info 종류   */
+/* 원룸 div영역 */
+.section03-info-oen{
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 2px;
+    border: 1px solid #e7e7e7;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* 투 쓰리룸 div영역 */
+.section03-info-twothree{
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 2px;
+    border: 1px solid #e7e7e7;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-left: 16px;
+}
+
+/* 오피스텔 div영역 */
+.section03-info-officetel{
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 2px;
+    border: 1px solid #e7e7e7;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-left: 16px;
+}
+
+/* 편의시설 div영역 */
+.section03-info-facility{
+    display: flex;
+    flex-direction: column;
+    width: 496px;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 2px;
+    border: 1px solid #e7e7e7;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-left: 16px;
+}
+
+/* 편의시설 모양 가로 정렬잡아주는 역활 */
+/* justify-content: space-between; */
+.info-column-jcsb{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 30px;
+}
+
+/* info-coulumn-type 편의시설 종류 구분 div */
+.info-column-type{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+/* 편의시설 공통 */
+/* column-type-icon 공통 아이콘 div */
+.column-type-icon{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 8px;
+    box-sizing: border-box;
+}
+
+/* 편의시설 아이콘 svg */
+/* 카페icon svg */
+.type-icon-cafe{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-cafe.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+.type-icon-cvs{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-cvs.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+/* 수퍼마켓 */
+.type-icon-supermarket{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-supermarket.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+/* 미용실 */
+.type-icon-beautyslaon{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-beautyslaon.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+/* 세탁빨래방 */
+.type-icon-laundry{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-laundry.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+.type-icon-exercise{
+    width: 36px;
+    height: 36px;
+    background: url(/img/icon-exercise.svg) center center no-repeat #ffffff;
+    box-sizing: border-box;
+}
+
+/* ---------info 공통 클래스---------- */
+/* info-title 제목 글 */
+.info-title{
+    font-size: 15px;
+    color: rgb(34, 34, 34);
+    line-height: 22px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* info-inner 안에 내용 영역 */
+.info-inner{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    height: 100%;
+    margin-top: 16px;
+    border-top: 1px solid #e7e7e7;
+    box-sizing: border-box;
+}
+
+/* info-column 열(세로 정렬) */
+.info-column{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+/* info-monthly 월세 div */
+.info-column-inner{
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* inner-name P태그 월세 이름  */
+.inner-name{
+    font-size: 14px;
+    line-height: 28px;
+    color: #656565;
+    box-sizing: border-box;
+}
+
+/* 숫자 왼쪽만 여백 margin-left: 16px; */
+.info-column-inner > p + p{
+    margin-left: 16px;
+}
+
+/* inner-name-number P태그 월세 가격(숫자) */
+.inner-name-number{
+    font-size: 18px;
+    line-height: 28px;
+    color: #222222;
+    box-sizing: border-box;
+}
+
+/* 전세 div  */
+.info-column-inner{
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* section03-info 공통 설명(전용면적) */
+.description{
+    margin-top: auto;
+    font-size: 12px;
+    color: #868686;
+    text-align: left;
+    box-sizing: border-box;
+}
+/* //---------공통 info---------- */
+
+
+
+
+
+
+
+
+/* -------------------------------- */
+
+
+
+/* ----------------푸터----------------*/
+/* footer w = 100% , h = 100% */
+footer{
+    width: 100%;
+    /*height: 100%;*/
+    background: #373737;
+}
+
+/* footer 내부영역 1280px */
+.footer-contents{
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.footer-top {
+    display: flex;
+    height: 70px;
+    border-bottom: 1px solid rgb(69, 69, 69);
+}
+
+/* footer 네비 */
+.footer-nav{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* footer 상단 네비 */
+.footer-top-ul{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.footer-top-ul > li{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 12px;
+}
+
+/* 구분 */
+.footer-top-ul > li + li {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgb(102, 102, 102);
+}
+
+.footer-ul-a{
+    color: #aaaaaa;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-ul-we{
+    color: #ececec;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-bot{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 26px 0px 28px;
+}
+
+.footer-bot > div{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+/* .footer-bot-ul 회사소개 ul */
+/* 회사 소개 (우리팀소개) */
+.footer-bot-ul > li{
+    height: 18px;
+    margin-bottom: 4px;
+    color: rgb(160, 160, 160);
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    font-weight: 100;
+    white-space: pre-wrap;
+}
+
+.footer-bot-div{
+    display: flex;
+    margin-top: 9px;
+}
+
+.footer-bot-div > a {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 9px;
+    height: 30px;
+    color: rgb(229, 229, 229);
+    font-size: 12px;
+    border-radius: 2px;
+    background-color: rgb(81, 81, 81);
+}
+
+.footer-bot-div > a + a {
+    margin-left: 8px;
+}
+
+.footer-bot-inc{
+    margin-top: 20px;
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.footer-bot-left{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bot-sns{
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+/* 푸터 sns 아이콘 */
+/* 인스타그램 */
+.instagram{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/img/sns01.png) center center / cover no-repeat;
+}
+/* 페북 왼쪽 여백 */
+.instagram + a{
+    margin-left: 10px;
+}
+/* 페북 */
+.facebook{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/img/sns02.png) center center / cover no-repeat;
+}
+/* 블로그 왼쪽 여백 */
+.facebook + a {
+    margin-left: 10px;
+}
+/* 블로그 */
+.blog{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/img/sns03.png) center center / cover no-repeat;
+}
+/* 포스트 왼쪽 여백 */
+.blog + a {
+    margin-left: 10px;
+}
+/* 네이버포스트 */
+.naverpost{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/img/sns04.png) center center / cover no-repeat;
+}
+.naverpost + a {
+    margin-left: 10px;
+}
+.yotube{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(/img/sns05.png) center center / cover no-repeat;
+}
+.section02-banner{
+    width: 100%;
+    height: 480px;
+}
+
+.section02-banner > h3 {
+    margin: 0px 0px 15px 0px;
+}
+
+.section02-banner > h3  > a{
+    font-size: 20px;
+}
+
+/* 전체 추천 매물 */
+.ReLi_content_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.ReLi_content_div_all{
+    width: 100%;
+    height: 1020px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* 이미지 크기*/
+.ReLi_content{
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+}
+
+/* 이미지 div*/
+.ReLi_img{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: rgb(250, 250, 250);
+    background-size: 60px 60px;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 이미지 */
+.ReLi_img > img{
+    width: 276px;
+    height: 182px;
+}
+
+/* 텍스트 영역 */
+.ReLi_text{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* 매물번호 */
+.ReLi_TrType{
+    font-weight: 100;
+    font-size: 14px;
+}
+
+/* 층수 */
+.ReLi_extent{
+    margin-top: 16px;
+}
+.ReLi_cost{
+    margin-top: 16px;
+}
+.ReLi_agent{
+
+}
+
+.ReLi_agent_div{
+    display: flex;
+    flex-direction: column;
+}
+
+.ReLi_agent_company{
+    margin-top : 6px;
+    font-weight: 100;
+}
+
+.ReLi_agent_name{
+    margin-top: 10px;
+}

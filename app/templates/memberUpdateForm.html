@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원수정페이지</title>
+    <!-- CSS -->
+    <link type="text/css" th:href="@{/css/MeMb/memberUpdateForm.css}" rel="stylesheet">
+    <!-- javascript -->
+    <script type="text/javascript" th:src="@{/js/reEs/jquery-3.6.0.min.js}"></script>
+</head>
+
+<th:block layout:fragment="css"></th:block>
+
+<body>
+<div layout:fragment="content" class="content">
+<div class="header" ></div>
+<div class="MyPa-div-all">
+    <div class="MyPa-div-con-all">
+        <div class="MyPa-div-all-pro">
+            <div class="MyPa-div-pro">
+                <div class="MyPa-div-pro01">
+                    <div class="MyPa-div-pro-pic" style="background-image:url(/img/login.png);"></div>
+                    <p class="MyPa-pro-nam" th:text="${memberFormDto.membNick}">사용자닉네임</p>
+                    <input type="hidden" th:field="*{memberFormDto.role}" th:value="${role}" >
+                    <p class="MyPa-pro-rat"  th:if="${#strings.equals(memberFormDto.role, 'USER')}">개인회원</p>
+                    <p class="MyPa-pro-rat"  th:unless="${#strings.equals(memberFormDto.role, 'USER')}">공인중개사</p>
+                </div>
+                <div class="MyPa-div-pro02"></div>
+            </div>
+            <div class="MyPa-div-all-pag">
+                <div class="MyPa-div-pag">
+                    <p class="MyPa-pag-tit">내정보</p>
+                    <p class="MyPa-pag-con"><a href="/mypage/USERmain"> 나의 맞춤 조건</a></p>
+                    <p class="MyPa-pag-con"><a href="/members/update">회원 정보 수정</a></p>
+                    <!--                    <p class="USMy-pag-con"><a th:method="post" th:href="@{'/members/delete/' + ${memberFormDto.id} }">회원 탈퇴</a></p>-->
+                    <p class="MyPa-pag-con"><a type="submit" th:href="@{'/members/delete/' + ${memberFormDto.id} }" >회원 탈퇴</a></p>
+                    <p class="MyPa-pag-tit">매물리스트</p>
+                    <p class="MyPa-pag-con USMy-pag-con-cover">최근 본 매물</p>
+                    <p class="MyPa-pag-con USMy-pag-con-cover">관심중개사 보기</p>
+<!--                    <p class="MyPa-pag-con">내가 문의한 매물</p>-->
+<!--                    <p class="MyPa-pag-con">내가 방문한 매물</p>-->
+<!--                    <p class="MyPa-pag-con">최근 본 매물</p>-->
+                    <p class="MyPa-pag-tit">Q&A</p>
+                    <p class="MyPa-pag-con"><a href="/service/freq">고객센터</a></p>
+<!--                    <p class="MyPa-pag-con">내가 쓴 덧글 보기</p>-->
+<!--                    <p class="MyPa-pag-tit">내정보</p>-->
+<!--                    <p class="MyPa-pag-con">나의 맞춤 조건</p>-->
+<!--                    <p class="MyPa-pag-con">회원 정보 수정</p>-->
+<!--                    <p class="MyPa-pag-con">회원 탈퇴</p>-->
+                </div>
+            </div>
+            
+        </div>
+        <div class="MyPa-div-con">
+            <div class="MyPa-div-tit">
+                <h1 class="MyPa-tit-font">회원 정보 수정</h1>
+            </div>
+            <div class="MyPa-div-con-inf">
+                <div class="MyPa-div-inf-top">
+                    <p class="MyPa-inf-tit">내정보</p>
+                </div>
+                <div class="MyPa-div-inf-bot">
+                    <form  role="form" method="post" enctype="multipart/form-data">
+                        <input type="hidden" th:field="*{memberFormDto.id}">
+
+                        <table>
+                        <colgroup>
+                            <col width="15%" />
+                            <col width="80%" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>구분</th>
+                            <td class="MyPa_roem">
+                                <input type="hidden" th:field="*{memberFormDto.role}" th:value="${role}" >
+                                <p th:if="${#strings.equals(memberFormDto.role, 'USER')}">개인회원</p>
+                                <p th:unless="${#strings.equals(memberFormDto.role, 'USER')}">공인중개사</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <input type="text" class="MyPg_input" th:field="*{memberFormDto.membName}" th:value="${membName}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>닉네임</th>
+                            <td>
+                                <input type="text" class="MyPg_input" th:field="*{memberFormDto.membNick}" th:value="${membNick}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td class="MyPa_roem">
+                                <input type="text" th:value="${memberFormDto.email}" disabled >
+                                <input type="hidden" th:field="*{memberFormDto.email}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td>
+                                <input type="password" class="MyPg_input" th:field="*{memberFormDto.membPassword}">
+                                <input type="hidden" th:field="*{memberFormDto.membPassword}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="add">주소</th>
+                            <td>
+                                <input type="hidden" id="sample6_postcode" placeholder="우편번호">
+                                <input type="text" class="MyPg_addr"th:value="${membAddress1}" th:field="*{memberFormDto.membAddress1}" id="sample6_address">
+                                <input type="button" class="MyPg_adse" onclick="sample6_execDaumPostcode()" value="주소 찾기"><br>
+                                <input type="text" class="form-control MyPg_input" th:value="${membAddress2}" th:field="*{memberFormDto.membAddress2}" id="sample6_detailAddress">
+                                <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
+                            </td>
+                            <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                            <script>
+                                function sample6_execDaumPostcode() {
+                                    new daum.Postcode({
+                                        oncomplete: function(data) {
+                                            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                            var addr = ''; // 주소 변수
+                                            var extraAddr = ''; // 참고항목 변수
+
+                                            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                                addr = data.roadAddress;
+                                            } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                                addr = data.jibunAddress;
+                                            }
+
+                                            // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                            if(data.userSelectedType === 'R'){
+                                                // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                                // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                                    extraAddr += data.bname;
+                                                }
+                                                // 건물명이 있고, 공동주택일 경우 추가한다.
+                                                if(data.buildingName !== '' && data.apartment === 'Y'){
+                                                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                                }
+                                                // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                                if(extraAddr !== ''){
+                                                    extraAddr = ' (' + extraAddr + ')';
+                                                }
+                                                // 조합된 참고항목을 해당 필드에 넣는다.
+                                                document.getElementById("sample6_extraAddress").value = extraAddr;
+
+                                            } else {
+                                                document.getElementById("sample6_extraAddress").value = '';
+                                            }
+
+                                            // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                            document.getElementById('sample6_postcode').value = data.zonecode;
+                                            document.getElementById("sample6_address").value = addr;
+                                            // 커서를 상세주소 필드로 이동한다.
+                                            document.getElementById("sample6_detailAddress").focus();
+                                        }
+                                    }).open();
+                                }
+                            </script>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text" class="MyPg_input" th:field="*{memberFormDto.membBirth}" th:value="${membBirth}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td>
+                                <input type="text" class="MyPg_input" th:field="*{memberFormDto.membPhone}" th:value="${membPhone}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="withdraw">
+                                <div>
+                                    <button th:formaction="@{'/members/delete/' + ${memberFormDto.id} }" type="submit">회원탈퇴</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="correction">
+                                <div>
+                                    <button th:formaction="@{'/members/update/' + ${memberFormDto.id} }" type="submit">회원 정보 수정하기</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<body>
+    <div class="login-wrapper">
+        <h2>Login</h2>
+        <form method="post" action="서버의url" id="login-form">
+            <input type="text" name="userName" placeholder="Email">
+            <input type="password" name="userPassword" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+        <a href="{{url_for('main.register')}}">회원가입</a>
+    </div>
+</body>

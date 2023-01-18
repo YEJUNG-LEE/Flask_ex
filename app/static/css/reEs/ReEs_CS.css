@@ -1,0 +1,636 @@
+*{
+    margin:0;
+    padding:0;
+}
+.ReCS{
+    position:absolute;
+    width:1182px;
+    height:100%;
+    background-color:#f7f7f7;
+    z-index:90;
+    border-right:1px solid #8d8d8f;
+    display:none;
+    text-align: left;
+}
+.ReCs-div{
+    box-sizing:border-box;
+    width:1182px;
+    height:100px;
+    /* border:1px solid black; */
+}
+
+.ReCs-subject{
+    box-sizing:border-box;
+    width:1182px;
+    height:60px;
+}
+.ReCs-select{
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    border-radius:5px;
+    margin: 20px auto 0;
+    font-size: 0;
+}
+.ReCs-sl-div{
+    box-sizing: border-box;
+    width: 50%;
+    height: 38px;
+    float: left;
+    padding-top: 11px;
+    padding-left: 20px;
+}
+.ReCs-normal{
+    padding-left:42px;
+    background-color:#52b0fb;
+    color:#FFFFFF;
+}
+.ReCs-custom{
+    border-left:1px solid #d1d1d1;
+}
+
+.ReCs-sl-div i{
+    opacity:0.7;
+    font-size:13px;
+}
+.fa-house{
+    margin-right:12px;
+
+}
+.fa-crosshairs{
+}
+.ReCs-normal > span{
+    font-size:15px;
+    font-weight:600;
+}
+.ReCs-custom > span{
+    font-size:14px;
+    font-weight:600;
+}
+.ReCs-sl-div>i{
+    height:20px;
+    width:21px;
+}
+.ReCs-title{
+    padding-left:30px;
+    color:#535353;
+    font-size:17px;
+    font-weight:600;
+}
+.ReCs-content{
+    padding-bottom:10px;
+    padding-left:74px;
+    height:70px;
+    box-sizing: border-box;
+}
+.ReCs-region{
+    height:38px;
+    width:350px;
+    margin-top:14px;
+    border-radius:45px;
+    border:1px solid #52b0fb;
+    background-color:#52b0fb;
+    opacity:1;
+    color:white;
+    font-size:15px;
+    padding-top:1px;
+    padding-left:20px;
+    box-sizing: border-box;
+}
+.ReCs-region:focus{
+    outline:none;
+    border:1px solid #FEC72F;
+}
+
+.ReCs-region:empty::before{
+    content:attr(placeholder);
+    color:rgb(238, 238, 238);
+    font-weight:500;
+}
+
+.ReCs-button{
+    box-sizing:border-box;
+    margin-top:18px;
+    margin-left:25px;
+    margin-right:0px;
+    width:120px;
+    height:34px;
+    border-radius:45px;
+    border:1px solid #d1d1d1;
+    display:inline-block;
+    font-size:14px;
+    padding-top:9px;
+    letter-spacing:2px;
+    font-weight:600;
+    color:#858484;
+    text-align:center;
+}
+
+.ReCs-One, .ReCs-TwoOrThree, .ReCs-secondFloor {
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 25px;
+    width: 120px;
+    height: 34px;
+    border-radius: 45px;
+    border: 1px solid #d1d1d1;
+    display: inline-block;
+    font-size: 14px;
+    padding-top: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #858484;
+    text-align: center;
+}
+
+.ReCs-buttons{
+    box-sizing:border-box;
+    margin-top:23px;
+    margin-right:25px;
+    width:120px;
+    height:35px;
+    border-radius:45px;
+    border:1px solid #d1d1d1;
+    display:inline-block;
+    font-size:14px;
+    padding-top:9px;
+    letter-spacing:2px;
+    font-weight:600;
+    color:#858484;
+    text-align:center;
+}
+
+.ReCs-button:hover{
+    cursor:pointer;
+}
+#ReCs-cost{
+    font-size:15px;
+    letter-spacing:0.5px;
+}
+/* 저장, 불러오기, 초기화, 적용 버튼 */
+
+.ReCs-MB-div{
+    padding-top:30px;
+    padding-left:350px;
+}
+
+.ReCs-MB{
+    display:inline-block;
+    box-sizing:border-box;
+    width:84px;
+    height:38px;
+    text-align:center;
+    margin-left:203px;
+    border:1px solid #52b0fb;
+    color : #4189c3;
+    font-weight:600;
+    border-radius:6px;
+}
+
+.ReCs-MB:hover{
+    border:1px solid #FEC72F;
+    background-color:#FEC72F;
+    color:#000000;
+    font-weight:600;
+}
+.ReCs-leftButton{
+    display:none;
+    box-sizing: border-box;
+    position: fixed;
+    top: 175px;
+    left: 1200px;
+    background-color:#20a7ff;
+    border-color: #0b2d93;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+    height: 32px;
+    min-width: 72px;
+    padding: 0 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    text-align:center;
+    padding-top:5px;
+    z-index:999;
+}
+.ReCs-leftButton:hover{
+    background-color:#FEC72F;
+    color:#000;
+}
+
+.ReCs-cudiv{
+    height:150px;
+}
+.ReCs-cadiv{
+    height:300px;
+}
+.ReCs-input{
+    margin-top:20px;
+    margin-left:20px;
+    width:275px;
+    height:40px;
+    border:1px solid #b8b7bb;
+    background-color:#6c93f7;
+    border-radius:5px;
+    text-align: center;
+    padding-top:7px;
+    box-sizing: border-box;
+    float:left;
+}
+.ReCs-input:empty::before{
+    content:attr(placeholder);
+    color:rgb(238, 238, 238);
+    font-weight:500;
+}
+.ReCs-add{
+    border:1px solid #b8b7bb;
+    border-radius:6px;
+    width:70px;
+    height:40px;
+    text-align: center;
+    float:left;
+    margin-top:20px;
+    margin-left:10px;
+    padding-top:7px;
+    box-sizing: border-box;
+}
+.ReCs-save{
+    box-sizing:border-box;
+    width:1182px;
+    height:100px;
+}
+.ReCs-but-div{
+    padding-left:20px;
+}
+.ReCs-collection{
+    height:600px;
+    display:none;
+}
+.ReCs-delete{
+    float:right;
+    margin-right:10px;
+    color:rgb(189, 99, 99);
+}
+/* =================================================================*/
+/* 조건 슬라이더 시작 */
+/* =================================================================*/
+
+#월세div{
+    display:inline-block;
+}
+#관리비div{
+    display:inline-block;
+}
+#보증금div{
+    display:inline-block;
+}
+#매매div{
+    display:none;
+}
+
+/* 양방향 슬라이더 */
+.ReCs-Slider{
+    display:inline-block;
+    width:200px;
+    height:45px;
+    box-sizing:border-box;
+    padding-top:20px;
+}
+
+.ReCs-Slider > .cs-floorSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-floorSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-floorSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-floorSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-floorSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-floorSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+.ReCs-Slider>input[type="range"] {
+    position: absolute;
+    /* opacity로 가린 것을 이벤트도 비활성화하기 위해 */
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 199px;
+    opacity: 0;
+    margin-top:10px;
+}
+
+.ReCs-Slider>input[type="range"]::-webkit-slider-thumb {
+    /* 겹쳐진 두 thumb를 모두 활성화 */
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    cursor: pointer;
+    /* appearance를 해야 위의 스타일들을 볼 수 있음 */
+    -webkit-appearance: none;
+}
+
+.ReCs-txt{
+    box-sizing:border-box;
+    margin-top:0px;
+    margin-right:15px;
+    width:140px;
+    height:35px;
+    border-radius:15px;
+    border:1px solid #52b0fb;
+    background-color:#52b0fb;
+    display:inline-block;
+    font-size:12px;
+    color:#FFFFFF;
+    font-weight:600;
+    padding-top:11px;
+    letter-spacing:0.5px;
+    text-align:center;
+}
+
+/* ============================================================= */
+/* ===================== 여기부터는 평수 ======================== */
+/* ============================================================= */
+
+.ReCs-Slider > .cs-extentSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-extentSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-extentSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-extentSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-extentSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-extentSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+
+/* ============================================================= */
+/* ===================== 여기부터는 월세 ======================== */
+/* ============================================================= */
+
+.ReCs-Slider > .cs-monthSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-monthSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-monthSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-monthSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-monthSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-monthSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+
+
+/* ============================================================= */
+/* ===================== 여기부터는 관리비 ======================== */
+/* ============================================================= */
+
+.ReCs-Slider > .cs-manageSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-manageSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-manageSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-manageSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-manageSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-manageSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+
+/* ============================================================= */
+/* ===================== 여기부터는 보증금 ======================== */
+/* ============================================================= */
+.ReCs-Slider > .cs-depositSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-depositSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-depositSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-depositSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-depositSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-depositSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+/* 여기서부터는 매매가 */
+.ReCs-Slider > .cs-tradeSlider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 15px 15px;
+}
+
+.ReCs-Slider > .cs-tradeSlider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+.ReCs-Slider > .cs-tradeSlider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #52b0fb;
+}
+.ReCs-Slider> .cs-tradeSlider > .thumb {
+    position: absolute;
+    top:5px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #52b0fb;
+    border-radius: 50%;
+}
+.ReCs-Slider>.cs-tradeSlider >.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -10px);
+}
+.ReCs-Slider>.cs-tradeSlider > .thumb.right {
+    right: 25%;
+    transform: translate(15px, -10px);
+}
+
+/* 슬라이더 끝 */

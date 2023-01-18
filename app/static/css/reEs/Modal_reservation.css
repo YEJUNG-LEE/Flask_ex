@@ -1,0 +1,223 @@
+#modal,#modal02 {
+    display: none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:20px;
+left:0px;
+z-index:999;
+}
+
+.modal_header{
+    width: 780px;
+    height: 100px;
+    border:0px;
+    box-sizing: border-box;
+}
+
+.modal_header_txt{
+    width: 600px;
+    float: left;
+}
+.modal_header_txt h2{
+    margin-left: 340px;
+}
+.modal_header_btn{
+    width: 176px;
+    float: left;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+#modal .modal_close_btn, #modal02 .modal_close_btn {
+  display:inline-block;
+  width:20px;
+  margin-left:calc(100% - 50px - 10px);
+  height: auto;
+  position: relative;
+  border: 0px;
+  margin-top: -50px;
+  outline: 0px;
+  background: #fff;
+}
+
+
+
+#modal .modal_content, #modal02 .modal_content {
+  width:789px;
+  height: 700px;
+  margin:auto;
+  padding:20px 10px;
+  background:#fff;
+  border:2px solid #666;
+
+}
+
+#modal .modal_layer {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.5);
+  z-index:-1;
+}
+
+.modal_content .modal_close_btn img{
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: auto;
+}
+
+.modal_content02{
+    width: 300px;
+    height: 400px;
+    padding: 24px;
+    margin-left: 20px;
+    float: left;
+
+}
+.modal_content03{
+    width: 340px;
+    height: 500px;
+    padding: 24px;
+    float: left;
+    margin-left: 15px;
+}
+.modal_content02_info{
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+}
+.modal_content02_phone{
+    margin-top: 25px;
+    border: 1px solid ;
+
+}
+.modal_content02_agree{
+    border: 1px solid black;
+    margin-top: 25px;
+    width: 300px;
+    height: 200px;
+}
+.modal_content03{
+    padding: 24px;
+    border: 1px solid black purple;
+
+}
+.modal_content03_favnum{
+
+    width: 340px;
+    height: 22px;
+    margin-bottom: 35px;
+    border: 1px solid black;
+}
+
+.modal_content03_dateTovisit{
+    border: 1px solid black;
+    width: 300px;
+    margin-bottom: 35px;
+}
+
+.calendar{
+    border: 1px solid black;
+    margin-bottom: 35px;
+}
+.modal-month, .modal-week, .modal-day, .modal-time{
+    width: 300px;
+}
+.modal_radio_anotherInFo{
+    border: 1px solid black;
+    margin-bottom: 35px;
+}
+.summaryInfo{
+    border: 1px solid black;
+    width: 340px;
+
+}
+.matchInfo, .priceInfo, .addressInfo, .conditionInfo{
+    width: 165px;
+    height: 54px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+#modal_open_btn02{
+    border: 1px solid black;
+    width: 789px;
+
+
+}
+
+#modal_open_btn03{
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 35px;
+}
+.Modal-GoTo-book{
+    border: 1px solid blue;
+    margin-left:240px;
+    margin-bottom: 5px;
+    border-radius:6px;
+    border:1px solid #2659db;
+    background-color:#4876ef;
+    color:#f7f7f7;
+    font-weight:800;
+    width: 300px;
+    height: 35px;
+}
+.Modal-GoTo-book:hover{
+    border:1px solid #d4a931;
+    background-color:#FEC72F;
+    color:#FFFFFF;
+    font-weight:800;}
+
+.GoTo-main{
+    border: 1px solid blue;
+   margin-left: 85px;
+    margin-bottom: 5px;
+    border-radius:6px;
+    border:1px solid #2659db;
+    background-color:#4876ef;
+    color:#f7f7f7;
+    font-weight:800;
+    width: 300px;
+    height: 35px;
+}
+.GoTo-main:hover{
+    border:1px solid #d4a931;
+    background-color:#FEC72F;
+    color:#FFFFFF;
+    font-weight:800;}
+
+    .GoTo-mypg{
+    border: 1px solid blue;
+    margin-left:20px;
+    margin-bottom: 5px;
+    border-radius:6px;
+    border:1px solid #2659db;
+    background-color:#4876ef;
+    color:#f7f7f7;
+    font-weight:800;
+    width: 300px;
+    height: 35px;
+}
+.GoTo-mypg:hover{
+    border:1px solid #d4a931;
+    background-color:#FEC72F;
+    color:#FFFFFF;
+    font-weight:800;}
+
+#modal_2page{
+    display: none;
+}
+
+/**/
+#modal_content_p2{
+   display: none;
+}
+.ReEs_recheck{
+border: 1px solid black; width:600px; height:400px; margin: auto;
+}

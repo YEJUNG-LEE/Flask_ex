@@ -1,0 +1,159 @@
+/*broker Info css*/
+.ReEs-broker-wrap{
+    border: 1px solid black;
+    width: 328px;
+    float: right;
+    position: sticky;
+    top:100px;
+    right: 30px;
+    margin-top: 40px;
+    margin-right: 50px;
+
+}
+.broker01{
+    background-color: #4876ef;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    width: 329px;
+}
+.broker02{
+    padding-top: 7px;
+    background-color: #f8f8f8;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 327px;
+}
+.broker01,.broker02{
+
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+.detail-price{
+    margin:20px;
+    display: flex;
+    flex-direction: row;
+}
+.detail-price02{
+    margin-left: 10px;
+    margin-top:7px;
+    width: 40px;
+    border: 2px solid #2659db;
+    color: #4876ef;
+    border-radius: 3px;
+
+    font-size: 17px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.detail-price03{
+    margin-left: 15px;
+   font-size: 33px;
+   color: #444;
+}
+.detail-sigudong{
+
+    margin:-13px 0 24px 30px;
+    font-size: 15px;
+}
+.ReEs-bropker-td{
+    width: 328px;
+    border-top: 1px solid #bddbf8;
+    border-bottom: 1px solid #bddbf8;
+    text-align: center;
+    padding: 13px;
+}
+
+.broker03 img{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 25px 20px 0 25px;
+}
+.broker03{
+  display :flex;
+  flex-direction: row;
+}
+.ReEs-Person-name{
+   margin-top: 30px;
+}
+.ReEs-bk-detail{
+       display: block;
+       flex-direction: column;
+       margin-top: 3px;
+       font-size: 13px;
+     }
+.broker04{
+
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 8px;
+}
+.broker04-ul{
+    margin-top: 5px;
+
+}
+.broker04 .broker04-li{
+    list-style: none;
+    font-size: 12px;
+
+}
+.broker04 .ReEs-home-name{
+    font-size: 16px;
+    font-weight: 600;
+
+}
+.broker04 .ReEs-description{
+    font-size: 13px;
+}
+
+.broker-table{
+   border: 1px solid
+   #f7f7f7;
+   width: 300px;
+   text-align: center;
+   margin-left: 13px;
+   margin-bottom: 25px;
+   background: #f8f8f8;
+   font-size: 12px;
+   margin-top: 10px;
+   padding: 8px;
+
+}
+.GoTo-book, .GoTo-msg{
+   width: 300px;
+   border: 1px solid black;
+   height: 41px;
+
+}
+.GoTo-book{
+     margin-left:15px;
+     margin-bottom: 5px;
+    border-radius:6px;
+    border:1px solid #2659db;
+    background-color:#4876ef;
+    color:#f7f7f7;
+    font-weight:800;
+}
+.GoTo-msg{
+   margin-left:15px;
+   margin-bottom: 25px;
+    border-radius:6px;
+    border:1px solid #2659db;
+    background-color:#4876ef;
+    color:#f7f7f7;
+    font-weight:800;}
+.GoTo-book:hover{
+    border:1px solid #d4a931;
+    background-color:#FEC72F;
+    color:#FFFFFF;
+    font-weight:800;}
+.GoTo-msg:hover{
+    border:1px solid #d4a931;
+    background-color:#FEC72F;
+    color:#FFFFFF;
+    font-weight:800;}
+/*end broker Info css*/
